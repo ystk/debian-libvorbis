@@ -205,7 +205,7 @@ top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign
 INCLUDES = -I$(top_srcdir)/include @OGG_CFLAGS@
 test_SOURCES = util.c util.h write_read.c write_read.h test.c
-test_LDADD = ../lib/libvorbisenc.la ../lib/libvorbis.la @OGG_LIBS@
+test_LDADD = ../lib/libvorbisenc.la ../lib/libvorbis.la @OGG_LIBS@ -lm
 all: all-am
 
 .SUFFIXES:

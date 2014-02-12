@@ -1,1 +1,1 @@
-debian/tmp/usr/lib/libvorbis.so.*
+debian/tmp/usr/lib/*/libvorbis.so.*

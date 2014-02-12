@@ -1,3 +1,40 @@
+libvorbis (1.3.2-1.3) unstable; urgency=low
+
+  * Non-maintainer upload to fix release goals
+  * Convert to Multi-Arch, closes: #637578 (Thanks, Steve Langasek)
+  * Remove .la file dependencies, closes: #633339 
+
+ -- Riku Voipio <riku.voipio@linaro.org>  Mon, 07 May 2012 14:53:26 +0300
+
+libvorbis (1.3.2-1.2) unstable; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * Fix cve-2012-0444: buffer overflow in floor1.c.
+
+ -- Michael Gilbert <mgilbert@debian.org>  Tue, 17 Apr 2012 22:37:49 -0400
+
+libvorbis (1.3.2-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS with ld --no-add-needed (Closes: #604797).
+    patch made by Matthias Klose <doko@ubuntu.com>.
+
+ -- HIGUCHI Daisuke (VDR dai) <dai@debian.org>  Mon, 09 Jan 2012 02:58:52 +0900
+
+libvorbis (1.3.2-1) unstable; urgency=low
+
+  * New upstream release (Closes: #613489)
+    - ov_fopen should have const qualifier for char *path (Closes: #547223)
+  * debian/control
+    - Bumped standards version to 3.9.1
+  * debian/rules
+    - Add --with-pic (Closes: #603195)
+  * debian/docs
+    - CHANGELOG was renamed to CHANGES
+  * Added debian/source/format 1.0
+
+ -- John Francesco Ferlito <johnf@inodes.org>  Tue, 15 Feb 2011 23:32:40 +1100
+
 libvorbis (1.3.1-1) unstable; urgency=low
 
   * New upstream release.
@@ -5,6 +42,17 @@ libvorbis (1.3.1-1) unstable; urgency=low
     - libvorbis: additional CVE-2009-3379 security fixes. (Closes: #573562)
     - libvorbis0a: Incorrect encoding on powerpc. (Closes: #549899)
     - FTBFS with binutils-gold. (Closes: #555383)
+  * debian/compat
+    - Moved to version 7
+  * debian/control
+    - Added ${misc:Depends}.
+    - Bumped dependency on debhelper to 7.0.50~.
+    - Added strict version depends on libvorbis0a to libvorbisenc2 and
+      libvorbisfile3.
+  * Added debian/docs
+  * Simplified debian/*.install
+  * Updated debian/libvorbis0a.symbols
+  * Moved to debhelper 7 style dh rules
 
  -- John Francesco Ferlito <johnf@inodes.org>  Fri, 26 Mar 2010 19:10:35 +1100
 
