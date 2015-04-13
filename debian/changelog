@@ -1,3 +1,63 @@
+libvorbis (1.3.4-2) unstable; urgency=low
+
+  [ Martin Steghöfer ]
+  * Add sampling rate sanity check to avoid invalid memory access.
+    (Closes: #716613)
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 03 Nov 2014 09:08:25 +0100
+
+libvorbis (1.3.4-1) unstable; urgency=medium
+
+  [ Martin Steghöfer ]
+  * New upstream version 1.3.4. (Closes: #739722)
+  * Rebased patches and dropped cve-2012-0444 patch that is included
+    in new upstream.
+  * Removed lintian override for tag
+    "using-first-person-in-description". Lintian has improved and
+    doesn't report this false positive any longer.
+  * Upgrade Standards-Version to 3.9.6. No changes necessary.
+  * Clean-up: Removed references to the old libvorbis0 package, it
+    hasn't been in any release for ages.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 24 Oct 2014 20:13:09 +0200
+
+libvorbis (1.3.2-2) unstable; urgency=medium
+
+  [ Martin Steghöfer ]
+  * Format patches for gbp-pq.
+  * Updated VCS meta information to list git repository.
+
+  [ Petter Reinholdtsen ]
+  * Drop John Francesco Ferlito and add me and Martin Steghöfer as
+    uploaders.
+  * Updated standards-version from 3.9.1 to 3.9.6.
+
+  [ Martin Steghöfer ]
+  * Fix lintian warning
+    "description-synopsis-starts-with-article". Make sure the synopsis
+    of the package description meets the formula "The package [name]
+    provides {a,an,the,some} [synopsis]."
+  * Override lintian tag "license-problem-non-free-RFC-BCP78" for RFC
+    5215 - it has a dual license.
+  * Fix lintian warning "wrong-name-for-upstream-changelog" by using
+    "dh_installchangelogs" instead of "dh_installdocs" for the
+    upstream changelog.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 24 Oct 2014 07:08:55 +0200
+
+libvorbis (1.3.2-1.5) unstable; urgency=low
+
+  * Non-maintainer upload to fix crash and hang bug.
+  * Switch to debian source format 3.0 (quilt).
+  * Add Homepage link in debian/control.
+  * Avoid floating point exception when dividing by zero when
+    bytespersample is zero (Closes: #635906).  Patch from Daniel Exner.
+  * Fix hang with loading Ogg Theora files when seeking to PCM 0 by
+    backporting r19159 of upstream SVN, authored by Chris Montgomery
+    (Closes: #762571).  Patch from Martin Steghöfer.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 14 Oct 2014 09:32:30 +0200
+
 libvorbis (1.3.2-1.4) unstable; urgency=low
 
   * Non-maintainer upload.

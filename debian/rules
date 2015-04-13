@@ -18,3 +18,6 @@ override_dh_install:
 	rm debian/tmp/usr/share/doc/libvorbis-*/doxygen-build.stamp
 	sed -i "/dependency_libs/ s/'.*'/''/" `find -name '*.la'`
 	dh_install
+
+override_dh_installchangelogs:
+	dh_installchangelogs CHANGES

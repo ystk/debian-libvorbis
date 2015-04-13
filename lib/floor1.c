@@ -11,7 +11,7 @@
  ********************************************************************
 
  function: floor backend 1 implementation
- last mod: $Id: floor1.c 17555 2010-10-21 18:14:51Z tterribe $
+ last mod: $Id: floor1.c 19031 2013-12-03 19:20:50Z tterribe $
 
  ********************************************************************/
 
@@ -202,6 +202,8 @@ static vorbis_look_floor *floor1_look(vorbis_dsp_state *vd,
   vorbis_info_floor1 *info=(vorbis_info_floor1 *)in;
   vorbis_look_floor1 *look=_ogg_calloc(1,sizeof(*look));
   int i,j,n=0;
+
+  (void)vd;
 
   look->vi=info;
   look->n=info->postlist[1];
@@ -1036,7 +1038,7 @@ static void *floor1_inverse1(vorbis_block *vb,vorbis_look_floor *in){
           }
         }
 
-        fit_value[i]=val+predicted&0x7fff;
+        fit_value[i]=(val+predicted)&0x7fff;
         fit_value[look->loneighbor[i-2]]&=0x7fff;
         fit_value[look->hineighbor[i-2]]&=0x7fff;
 
