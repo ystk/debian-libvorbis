@@ -2,3 +2,4 @@
 0002-Avoid-SIGFPE-when-bytespersample-is-zero.patch
 0003-Fix-hang-when-loading-Ogg-Theora-files-in-audacity.patch
 0004-Add-sampling-rate-sanity-check-to-avoid-invalid-memo.patch
+0005-CVE-2018-5146-Prevent-out-of-bounds-write-in-codeboo.patch
