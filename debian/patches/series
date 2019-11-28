@@ -3,3 +3,7 @@
 0003-Fix-hang-when-loading-Ogg-Theora-files-in-audacity.patch
 0004-Add-sampling-rate-sanity-check-to-avoid-invalid-memo.patch
 0005-CVE-2018-5146-Prevent-out-of-bounds-write-in-codeboo.patch
+
+CVE-2017-14160--CVE-2018-10393.patch
+CVE-2018-10392.patch
+
